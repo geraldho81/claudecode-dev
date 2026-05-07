@@ -172,6 +172,8 @@
       .three-col, .four-col { grid-template-columns: 1fr !important; }
       .five-col { grid-template-columns: 1fr 1fr !important; }
       .site-footer { flex-direction: column; }
+      .hero-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
+      .hero-toc { display: none; }
     }
   </style>
 </head>
@@ -185,31 +187,91 @@
      HERO
 ════════════════════════════════════════════════════════ -->
 <section id="sec-hero" data-nav style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:0 28px;">
-  <div style="max-width:1240px;margin:0 auto;width:100%;padding:120px 0 80px;">
-    <div class="reveal">
-      <p class="section-kicker">Developer Masterclass</p>
+  <div class="hero-grid" style="max-width:1240px;margin:0 auto;width:100%;padding:120px 0 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+
+    <!-- Left: headline + CTA -->
+    <div>
+      <div class="reveal">
+        <p class="section-kicker">Developer Masterclass</p>
+      </div>
+      <div class="reveal" style="transition-delay:80ms">
+        <h1>Claude Code<br /><em>for Web<br />Developers</em></h1>
+      </div>
+      <div class="reveal" style="transition-delay:160ms;margin-bottom:40px;">
+        <p class="body-lg">Claude Code lives in your terminal. Tell it what to build. It reads your project, writes the code, and asks before it changes anything.</p>
+      </div>
+      <div class="reveal" style="transition-delay:240ms;display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="#sec-what-is" class="button primary">Start learning</a>
+        <a href="#sec-setup" class="button secondary">Jump to setup</a>
+      </div>
+      <div class="reveal" style="transition-delay:320ms;margin-top:56px;display:flex;gap:24px;flex-wrap:wrap;">
+        <span style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--soft);">
+          <span style="width:6px;height:6px;border-radius:50%;background:var(--acid);display:inline-block;"></span>Full-stack ready
+        </span>
+        <span style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--soft);">
+          <span style="width:6px;height:6px;border-radius:50%;background:var(--acid);display:inline-block;"></span>Git-aware
+        </span>
+        <span style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--soft);">
+          <span style="width:6px;height:6px;border-radius:50%;background:var(--acid);display:inline-block;"></span>Works in your existing stack
+        </span>
+      </div>
     </div>
-    <div class="reveal" style="transition-delay:80ms">
-      <h1>Claude Code<br /><em>for Web<br />Developers</em></h1>
+
+    <!-- Right: page contents -->
+    <div class="hero-toc reveal" style="transition-delay:200ms;">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);letter-spacing:0.16em;margin-bottom:20px;">WHAT'S INSIDE</p>
+      <nav style="display:grid;gap:2px;">
+        <a href="#sec-what-is" style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:14px;transition:color 0.2s;" onmouseover="this.style.color='#b7ff2a'" onmouseout="this.style.color='#b9b4aa'">
+          <span>What is Claude Code?</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">01</span>
+        </a>
+        <a href="#sec-vs" style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:14px;transition:color 0.2s;" onmouseover="this.style.color='#b7ff2a'" onmouseout="this.style.color='#b9b4aa'">
+          <span>How it compares to Copilot</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">02</span>
+        </a>
+        <a href="#sec-prereq" style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:14px;transition:color 0.2s;" onmouseover="this.style.color='#b7ff2a'" onmouseout="this.style.color='#b9b4aa'">
+          <span>What you need</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">03</span>
+        </a>
+        <a href="#sec-setup" style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:14px;transition:color 0.2s;" onmouseover="this.style.color='#b7ff2a'" onmouseout="this.style.color='#b9b4aa'">
+          <span>Installation — Mac &amp; Windows</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">04</span>
+        </a>
+        <a href="#sec-plan" style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:14px;transition:color 0.2s;" onmouseover="this.style.color='#b7ff2a'" onmouseout="this.style.color='#b9b4aa'">
+          <span>Plan Mode</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">05</span>
+        </a>
+        <a href="#sec-talk" style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:14px;transition:color 0.2s;" onmouseover="this.style.color='#b7ff2a'" onmouseout="this.style.color='#b9b4aa'">
+          <span>How to write good prompts</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">06</span>
+        </a>
+        <a href="#sec-init" style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:14px;transition:color 0.2s;" onmouseover="this.style.color='#b7ff2a'" onmouseout="this.style.color='#b9b4aa'">
+          <span>CLAUDE.md — your project rules</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">07</span>
+        </a>
+        <a href="#sec-superpowers" style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:14px;transition:color 0.2s;" onmouseover="this.style.color='#b7ff2a'" onmouseout="this.style.color='#b9b4aa'">
+          <span>Things you can stop doing by hand</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">08</span>
+        </a>
+        <a href="#sec-mcp" style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:14px;transition:color 0.2s;" onmouseover="this.style.color='#b7ff2a'" onmouseout="this.style.color='#b9b4aa'">
+          <span>Connect to GitHub, Figma &amp; more</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">09</span>
+        </a>
+        <a href="#sec-casestudy1" style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:14px;transition:color 0.2s;" onmouseover="this.style.color='#b7ff2a'" onmouseout="this.style.color='#b9b4aa'">
+          <span>Real-world case studies</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">10</span>
+        </a>
+        <a href="#sec-truth" style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:14px;transition:color 0.2s;" onmouseover="this.style.color='#b7ff2a'" onmouseout="this.style.color='#b9b4aa'">
+          <span>Where it gets things wrong</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">11</span>
+        </a>
+        <a href="#sec-pricing" style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;color:var(--muted);font-size:14px;transition:color 0.2s;" onmouseover="this.style.color='#b7ff2a'" onmouseout="this.style.color='#b9b4aa'">
+          <span>Pricing</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">12</span>
+        </a>
+      </nav>
     </div>
-    <div class="reveal" style="transition-delay:160ms;max-width:560px;margin-bottom:40px;">
-      <p class="body-lg">Claude Code lives in your terminal. Tell it what to build. It reads your project, writes the code, and asks before it changes anything.</p>
-    </div>
-    <div class="reveal" style="transition-delay:240ms;display:flex;gap:14px;flex-wrap:wrap;">
-      <a href="#sec-what-is" class="button primary">Start learning</a>
-      <a href="#sec-setup" class="button secondary">Jump to setup</a>
-    </div>
-    <div class="reveal" style="transition-delay:320ms;margin-top:56px;display:flex;gap:24px;flex-wrap:wrap;">
-      <span style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--soft);">
-        <span style="width:6px;height:6px;border-radius:50%;background:var(--acid);display:inline-block;"></span>Full-stack ready
-      </span>
-      <span style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--soft);">
-        <span style="width:6px;height:6px;border-radius:50%;background:var(--acid);display:inline-block;"></span>Git-aware
-      </span>
-      <span style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--soft);">
-        <span style="width:6px;height:6px;border-radius:50%;background:var(--acid);display:inline-block;"></span>Works in your existing stack
-      </span>
-    </div>
+
   </div>
 </section>
 
