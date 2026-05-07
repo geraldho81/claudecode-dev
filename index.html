@@ -279,8 +279,9 @@
 <!-- ═══════════════════════════════════════════════════════
      WHAT IS CLAUDE CODE
 ════════════════════════════════════════════════════════ -->
-<section id="sec-what-is" data-nav class="section-band">
-  <div class="section-inner">
+<section id="sec-what-is" data-nav class="section-band" style="position:relative;background-image:url('https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center;">
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,8,7,0.97) 0%,rgba(7,8,7,0.90) 55%,rgba(7,8,7,0.82) 100%);z-index:0;"></div>
+  <div class="section-inner" style="position:relative;z-index:1;">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;" class="three-col">
       <div>
         <p class="section-kicker reveal">What is Claude Code</p>
@@ -373,8 +374,9 @@
 <!-- ═══════════════════════════════════════════════════════
      HOW IT ACTUALLY WORKS
 ════════════════════════════════════════════════════════ -->
-<section id="sec-how" data-nav class="section-band" style="background:var(--carbon);">
-  <div class="section-inner">
+<section id="sec-how" data-nav class="section-band" style="position:relative;background-image:url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center;">
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,8,7,0.97) 0%,rgba(7,8,7,0.92) 60%,rgba(7,8,7,0.85) 100%);z-index:0;"></div>
+  <div class="section-inner" style="position:relative;z-index:1;">
     <p class="section-kicker reveal">The workflow</p>
     <h2 class="reveal" style="margin-bottom:48px;">Four steps from<br />idea to commit</h2>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;" class="four-col three-col">
@@ -482,6 +484,10 @@
               <p class="body-md" style="display:flex;gap:10px;"><span style="color:rgba(244,241,234,0.35);font-weight:700;">–</span> Can't hook into shell scripts, git aliases, or custom workflows.</p>
             </div>
           </div>
+        </div>
+        <div style="margin-top:24px;background:rgba(183,255,42,0.06);border:1px solid rgba(183,255,42,0.2);border-radius:8px;padding:16px 20px;display:flex;gap:14px;align-items:flex-start;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--acid);font-weight:700;white-space:nowrap;margin-top:1px;">HONEST TAKE</span>
+          <p class="body-md">The desktop app is a little bit retarded. It works — but it's clunky, and it doesn't connect to your actual project folder the way the CLI does. Use it to get a first feel for Claude Code. Then come back and do Option 2.</p>
         </div>
       </div>
     </div>
@@ -665,8 +671,9 @@
 <!-- ═══════════════════════════════════════════════════════
      PLAN MODE
 ════════════════════════════════════════════════════════ -->
-<section id="sec-plan" data-nav class="section-band">
-  <div class="section-inner">
+<section id="sec-plan" data-nav class="section-band" style="position:relative;background-image:url('https://images.unsplash.com/photo-1484788984921-03950022c9ef?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center;">
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,8,7,0.96) 0%,rgba(7,8,7,0.88) 55%,rgba(7,8,7,0.80) 100%);z-index:0;"></div>
+  <div class="section-inner" style="position:relative;z-index:1;">
     <p class="section-kicker reveal">Safety first</p>
     <h2 class="reveal" style="margin-bottom:16px;">Plan Mode — see what<br />it'll do before it does it</h2>
     <p class="body-lg reveal" style="max-width:560px;margin-bottom:48px;">Before Claude touches a single file, it tells you exactly what it plans to change. You read it, say yes, or tell it to do something different.</p>
@@ -832,37 +839,37 @@
   <div class="section-inner" style="position:relative;z-index:1;">
     <p class="section-kicker reveal">What you can hand off</p>
     <h2 class="reveal" style="margin-bottom:16px;">Things you can stop<br />doing by hand</h2>
-    <p class="body-lg reveal" style="max-width:560px;margin-bottom:48px;">These are the boring, time-consuming jobs most web developers do manually. Claude handles all of them.</p>
+    <p class="body-lg reveal" style="max-width:560px;margin-bottom:48px;">These are the jobs WordPress and Elementor developers spend hours on every week. Claude handles all of them.</p>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="three-col">
       <div class="card reveal">
-        <h3 style="margin-bottom:10px;">Create components and pages</h3>
-        <p class="body-md" style="margin-bottom:12px;">Describe a new component, page, or feature. Claude writes the files, follows your existing patterns, and wires everything up.</p>
-        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">React · Next.js · Express · NestJS</p>
+        <h3 style="margin-bottom:10px;">Fix PHP errors</h3>
+        <p class="body-md" style="margin-bottom:12px;">Paste the error from your debug log. Claude reads functions.php, finds the exact line that's broken, explains what went wrong, and fixes it.</p>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">functions.php · child themes · debug.log</p>
       </div>
       <div class="card reveal" style="transition-delay:60ms;">
-        <h3 style="margin-bottom:10px;">Write tests</h3>
-        <p class="body-md" style="margin-bottom:12px;">Point it at a component or function. It writes the tests — unit tests, edge cases, the lot — without you typing a single one.</p>
-        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">Vitest · Jest · Testing Library · Playwright</p>
+        <h3 style="margin-bottom:10px;">CSS that actually works</h3>
+        <p class="body-md" style="margin-bottom:12px;">Describe the change you want. Claude writes CSS with the right specificity to override Elementor's inline styles — no more !important guessing.</p>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">Elementor · Divi · child theme CSS</p>
       </div>
       <div class="card reveal" style="transition-delay:120ms;">
-        <h3 style="margin-bottom:10px;">Debugging</h3>
-        <p class="body-md" style="margin-bottom:12px;">Paste the error and the stack trace. Claude reads the referenced files, diagnoses the root cause, proposes a fix, and verifies it.</p>
-        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">Runtime errors · TypeScript · Build failures</p>
+        <h3 style="margin-bottom:10px;">WooCommerce tweaks</h3>
+        <p class="body-md" style="margin-bottom:12px;">Custom checkout fields, order email changes, pricing rules. Describe what you need — Claude writes the hook and drops it in the right place in your code.</p>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">WooCommerce · checkout · product pages</p>
       </div>
       <div class="card reveal" style="transition-delay:180ms;">
-        <h3 style="margin-bottom:10px;">Clean up old code</h3>
-        <p class="body-md" style="margin-bottom:12px;">Got a component that's grown too big and messy? Claude splits it up, renames things, and tidies it — without breaking anything else that uses it.</p>
-        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">Scope-safe · Cross-file · Test-verified</p>
+        <h3 style="margin-bottom:10px;">Build custom shortcodes</h3>
+        <p class="body-md" style="margin-bottom:12px;">Tell Claude what the shortcode should do. It writes the PHP, registers it properly, and shows you exactly where to paste it in functions.php.</p>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">Shortcodes · ACF · custom post types</p>
       </div>
       <div class="card reveal" style="transition-delay:240ms;">
-        <h3 style="margin-bottom:10px;">PR descriptions</h3>
-        <p class="body-md" style="margin-bottom:12px;">Run it on a git diff. Claude reads the actual changes and writes a structured PR description with context, reasoning, and testing notes.</p>
-        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">GitHub · GitLab · Bitbucket</p>
+        <h3 style="margin-bottom:10px;">Debug plugin conflicts</h3>
+        <p class="body-md" style="margin-bottom:12px;">Describe what's breaking and when. Claude reads your setup, finds the conflict, and gives you a fix — without you having to disable plugins one by one.</p>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">Plugin conflicts · theme issues · white screens</p>
       </div>
       <div class="card reveal" style="transition-delay:300ms;">
-        <h3 style="margin-bottom:10px;">Database changes</h3>
-        <p class="body-md" style="margin-bottom:12px;">Describe the change you need. Claude writes the migration file, updates your models, and checks nothing else will break.</p>
-        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">Prisma · Drizzle · Sequelize · Knex</p>
+        <h3 style="margin-bottom:10px;">Document your site</h3>
+        <p class="body-md" style="margin-bottom:12px;">Claude reads your functions.php, active plugins, and custom code — then writes a clear guide for whoever manages the site next. Or for future you.</p>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);">Site docs · handover notes · client guides</p>
       </div>
     </div>
   </div>
@@ -1120,8 +1127,9 @@
 <!-- ═══════════════════════════════════════════════════════
      KEEPING IT SAFE (git-aware)
 ════════════════════════════════════════════════════════ -->
-<section id="sec-safe" data-nav class="section-band">
-  <div class="section-inner">
+<section id="sec-safe" data-nav class="section-band" style="position:relative;background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center;">
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,8,7,0.97) 0%,rgba(7,8,7,0.90) 55%,rgba(7,8,7,0.83) 100%);z-index:0;"></div>
+  <div class="section-inner" style="position:relative;z-index:1;">
     <p class="section-kicker reveal">Working safely</p>
     <h2 class="reveal" style="margin-bottom:16px;">Git is your<br />safety net</h2>
     <p class="body-lg reveal" style="max-width:560px;margin-bottom:48px;">Claude Code is git-aware. It works within your repository, respects your branches, and can commit — but only when you tell it to. Your version control is the last line of defence.</p>
@@ -1266,8 +1274,9 @@
 <!-- ═══════════════════════════════════════════════════════
      PRICING
 ════════════════════════════════════════════════════════ -->
-<section id="sec-pricing" data-nav class="section-band">
-  <div class="section-inner">
+<section id="sec-pricing" data-nav class="section-band" style="position:relative;background-image:url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center;">
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,8,7,0.97) 0%,rgba(7,8,7,0.90) 55%,rgba(7,8,7,0.83) 100%);z-index:0;"></div>
+  <div class="section-inner" style="position:relative;z-index:1;">
     <p class="section-kicker reveal">Pricing</p>
     <h2 class="reveal" style="margin-bottom:16px;">What does it<br />actually cost?</h2>
     <p class="body-lg reveal" style="max-width:560px;margin-bottom:48px;">Flat-rate subscriptions. No metered API panic. Pick the plan that matches how hard you plan to use it.</p>
@@ -1335,8 +1344,9 @@
 <!-- ═══════════════════════════════════════════════════════
      LIVE DEMO
 ════════════════════════════════════════════════════════ -->
-<section id="sec-demo" data-nav class="section-band">
-  <div class="section-inner">
+<section id="sec-demo" data-nav class="section-band" style="position:relative;background-image:url('https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center;">
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,8,7,0.97) 0%,rgba(7,8,7,0.90) 55%,rgba(7,8,7,0.83) 100%);z-index:0;"></div>
+  <div class="section-inner" style="position:relative;z-index:1;">
     <p class="section-kicker reveal">Hands on</p>
     <h2 class="reveal" style="margin-bottom:16px;">Your first session<br />in four steps</h2>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;" class="three-col">
