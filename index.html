@@ -187,7 +187,10 @@
 <!-- ═══════════════════════════════════════════════════════
      HERO
 ════════════════════════════════════════════════════════ -->
-<section id="sec-hero" data-nav style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:0 28px;position:relative;background-image:url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center;">
+<section id="sec-hero" data-nav style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:0 28px;position:relative;overflow:hidden;background:#070807;">
+  <video autoplay muted loop playsinline preload="auto" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;">
+    <source src="https://res.cloudinary.com/dsg6ukzzt/video/upload/f_auto,q_auto/v1778245603/claudecode-dev/hero-vid.mp4" type="video/mp4" />
+  </video>
   <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,8,7,0.94) 0%,rgba(7,8,7,0.80) 60%,rgba(16,17,15,0.70) 100%);z-index:0;"></div>
   <div class="hero-grid" style="max-width:1240px;margin:0 auto;width:100%;padding:120px 0 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1;">
 
